@@ -1,0 +1,13 @@
+[package]
+name = "ode_euler"
+version = "0.1.0"
+authors = ["Takaaki MINOMO <mino2357@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+approx = "0.4"
+
+# [dev-dependencies]
+# approx = { version = "0.4", features = ["approx"] }
