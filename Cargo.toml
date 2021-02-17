@@ -4,8 +4,12 @@ version = "0.1.0"
 authors = ["Takaaki MINOMO <mino2357@gmail.com>"]
 edition = "2018"
 
+#
+# Euler Method
+#
+
 [[bin]]
-name = "main"
+name = "ode_euler"
 path = "ode_euler/main.rs"
 
 [lib]
@@ -13,10 +17,22 @@ name = "basic_tests"
 path = "ode_euler/basic_tests.rs"
 test = true
 
+#
+# Heat eq.
+# how to build multiple binary : https://doc.rust-lang.org/cargo/commands/cargo-build.html
+#
+
+[[bin]]
+name = "heat_eq"
+path = "heat_eq/main.rs"
+
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
 approx = "0.4"
+#num-traits = "0.2"
 
-# [dev-dependencies]
-# approx = { version = "0.4", features = ["approx"] }
+[dependencies.num-traits]
+version = "0.2"
+default-features = false
+features = ["libm"]    # <--- Uncomment if you wish to use `Float` and `Real` without `std`
