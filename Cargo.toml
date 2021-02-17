@@ -4,6 +4,15 @@ version = "0.1.0"
 authors = ["Takaaki MINOMO <mino2357@gmail.com>"]
 edition = "2018"
 
+[[bin]]
+name = "main"
+path = "ode_euler/main.rs"
+
+[lib]
+name = "basic_tests"
+path = "ode_euler/basic_tests.rs"
+test = true
+
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
